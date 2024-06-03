@@ -63,3 +63,8 @@ Click on Save Button to save the details into the database.(MongoDB)
 After Saving navigate to /data endpoint which is the <strong>OCR Management Console</strong>, where you can Create,Update,Delete and Read all the OCR Results available in the Database. 
 
 ![OCR Data Management](image-1.png)
+
+
+Code Explanation Video- https://www.loom.com/share/f0501da8a36848ef9ff52107da7ab9d3?sid=70ce2476-b4d5-4993-9d29-5a8b534a102e
+
+Application Demo Video - 
