@@ -6,6 +6,10 @@
 
 This application is built using Flask for the backend and React for the frontend. It integrates with MongoDB for data storage and uses Google Cloud Vision API for OCR (Optical Character Recognition). The application allows users to upload images of Thai ID cards, extract relevant information using OCR, and manage the extracted data through a CRUD interface.
 
+Application Demo Video - https://www.loom.com/share/551da3436b124ec89b23b49790ff8396?sid=295e08f9-5361-448d-b05f-573571881f5e
+
+Code Explanation Video- https://www.loom.com/share/f0501da8a36848ef9ff52107da7ab9d3?sid=70ce2476-b4d5-4993-9d29-5a8b534a102e
+
 ## Technologies Used
 
 - **Backend**: Flask
@@ -65,6 +69,4 @@ After Saving navigate to /data endpoint which is the <strong>OCR Management Cons
 ![OCR Data Management](image-1.png)
 
 
-Code Explanation Video- https://www.loom.com/share/f0501da8a36848ef9ff52107da7ab9d3?sid=70ce2476-b4d5-4993-9d29-5a8b534a102e
 
-Application Demo Video - 
