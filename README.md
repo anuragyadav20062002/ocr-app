@@ -1,5 +1,36 @@
 # OCR-APP
 
+# Application Architecture
+
+## Overview
+
+This application is built using Flask for the backend and React for the frontend. It integrates with MongoDB for data storage and uses Google Cloud Vision API for OCR (Optical Character Recognition). The application allows users to upload images of Thai ID cards, extract relevant information using OCR, and manage the extracted data through a CRUD interface.
+
+## Technologies Used
+
+- **Backend**: Flask
+- **Frontend**: React
+- **Database**: MongoDB
+- **OCR**: Google Cloud Vision API
+- **Styling**: Tailwind CSS (or Bootstrap, if preferred)
+- **State Management**: React Hook Form
+
+## Backend
+
+### Flask Application
+
+The Flask application handles the following tasks:
+
+1. **OCR Processing**:
+   - Uses Google Cloud Vision API to detect text in uploaded images.
+   - Extracts relevant information using regular expressions.
+
+2. **CRUD Operations**:
+   - Provides endpoints to create, read, update, and delete OCR data in MongoDB.
+
+3. **CORS**:
+   - Enabled using `flask-cors` to allow cross-origin requests from the React frontend.
+
 Using this application you can Scan Thai ID cards using Google Cloud Vision API and get following information 
 
 <ul>
