@@ -5,12 +5,24 @@ from google.cloud import vision
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
+load_dotenv()
 
-# Set the Google Application Credentials environment variable
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:/Users/91945/Desktop/ocr-app/server/credentials.json'
+# Get the JSON string from the environment variable
+credentials_json = os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON')
+
+# Parse the JSON string back into a dictionary
+credentials = json.loads(credentials_json)
+
+# Save the credentials to a temporary file
+with open('temp_credentials.json', 'w') as temp_file:
+    json.dump(credentials, temp_file)
+
+# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of the temporary file
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'temp_credentials.json'
 
 # MongoDB connection
 client = MongoClient("mongodb+srv://anuragyadav20602:uQ3cyJkXIE089dcL@cluster0.d3qap3r.mongodb.net/")
